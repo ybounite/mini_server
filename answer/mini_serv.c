@@ -106,7 +106,7 @@ void    stratServer(int sockfd)
                         sprintf(bufWrite,  "client %d: %s\n", clients[s].id, clients[s].msg);
                         bzero(clients[s].msg, sizeof(clients[s].msg));
                         send_all(s);
-                        j = 0;
+                        j = -1;
                     }
                     j++;
                 }
